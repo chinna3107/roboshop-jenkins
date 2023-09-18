@@ -1,0 +1,10 @@
+- name: Multi-brand pipeline jobs
+  ansible.builtin.include_task:
+    file: mjob.yml
+    loop: "{{ mjobs }}"
+
+- name: Single-brand pipeline jobs
+  ansible.builtin.include_task:
+    file: sjob.yml
+    loop: "{{ sjobs }}"
+
