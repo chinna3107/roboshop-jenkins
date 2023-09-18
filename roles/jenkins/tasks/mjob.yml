@@ -1,7 +1,7 @@
 - name: Copy Config File - {{ item.job_name }}
   ansible.builtin.template:
     src: mjob.xml
-  dest: /tmp/mjob.xml
+    dest: /tmp/mjob.xml
 
 - name: Create job - {{ item.job_name }}
   community.general.jenkins_job:
